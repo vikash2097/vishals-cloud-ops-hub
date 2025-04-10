@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -26,6 +25,7 @@ export default {
 			fontFamily: {
 				sans: ['Inter', 'system-ui', 'sans-serif'],
 				heading: ['Montserrat', 'system-ui', 'sans-serif'],
+				serif: ['Playfair Display', 'Georgia', 'serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -71,32 +71,32 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				brand: {
-					50: '#f0f9ff',
-					100: '#e0f2fe',
-					200: '#bae6fd',
-					300: '#7dd3fc',
-					400: '#38bdf8',
-					500: '#0ea5e9',
-					600: '#0284c7',
-					700: '#0369a1',
-					800: '#075985',
-					900: '#0c4a6e',
-					950: '#082f49',
+				elegant: {
+					50: '#f8f7f4',
+					100: '#f1efe9',
+					200: '#e2ded3',
+					300: '#d5cfc0',
+					400: '#c7bead',
+					500: '#b8ad9b',
+					600: '#a99a8b',
+					700: '#8e7f71',
+					800: '#73675c',
+					900: '#3d3630',
+					950: '#211c18',
 				},
-				tech: {
-					50: '#f0fdfa',
-					100: '#ccfbf1',
-					200: '#99f6e4',
-					300: '#5eead4',
-					400: '#2dd4bf',
-					500: '#14b8a6',
-					600: '#0891b2',
-					700: '#0e7490',
-					800: '#155e75',
-					900: '#164e63',
-					950: '#083344',
-				}
+				rich: {
+					50: '#f7f4f2',
+					100: '#efe6e0',
+					200: '#e0cec2',
+					300: '#d0b5a3',
+					400: '#c09c84',
+					500: '#b0846c',
+					600: '#a0765f',
+					700: '#8c664f',
+					800: '#735344',
+					900: '#5f4539',
+					950: '#32211a',
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -107,6 +107,7 @@ export default {
 				'subtle': '0 2px 10px rgba(0, 0, 0, 0.05)',
 				'card': '0 4px 20px rgba(0, 0, 0, 0.08)',
 				'elevated': '0 10px 30px rgba(0, 0, 0, 0.12)',
+				'elegant': '0 10px 40px rgba(33, 28, 24, 0.1)',
 			},
 			keyframes: {
 				'accordion-down': {

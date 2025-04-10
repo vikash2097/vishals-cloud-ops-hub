@@ -36,14 +36,14 @@ const projects = [
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="section-padding bg-background">
+    <section id="projects" className="section-padding elegant-dark">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="section-heading">
+          <div className="inline-flex items-center rounded-full bg-elegant-800/60 px-3 py-1 text-sm font-medium text-elegant-100 mb-4">
             Featured Projects
           </div>
-          <h2 className="mb-6 font-heading">Recent Client Success Stories</h2>
-          <p className="text-lg text-muted-foreground">
+          <h2 className="mb-6 font-serif text-elegant-50">Recent Client Success Stories</h2>
+          <p className="text-lg text-elegant-200 max-w-2xl mx-auto">
             Check out some of my recent projects and see how I've helped clients solve 
             their technical challenges with tailored solutions.
           </p>
@@ -53,33 +53,33 @@ const ProjectsSection = () => {
           {projects.map((project, index) => (
             <div 
               key={index} 
-              className="bg-card border border-border rounded-xl overflow-hidden shadow-card card-hover"
+              className="rich-glass rounded-md overflow-hidden shadow-elegant card-hover"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="p-7">
                 <div className="flex justify-between items-start mb-5">
-                  <div className="h-14 w-14 rounded-xl bg-brand-50 border border-brand-100 flex items-center justify-center text-brand-600">
+                  <div className="h-14 w-14 rounded-md bg-elegant-800/60 border border-elegant-700/30 flex items-center justify-center text-elegant-200">
                     <project.icon className="h-7 w-7" />
                   </div>
-                  <div className="bg-secondary/10 text-secondary-foreground rounded-full px-3 py-1.5 text-xs font-medium border border-secondary/20">
+                  <div className="bg-rich-700/20 text-rich-300 rounded-full px-3 py-1.5 text-xs font-medium border border-rich-600/20">
                     Case Study
                   </div>
                 </div>
-                <h3 className="text-xl font-bold mb-3 font-heading">{project.title}</h3>
-                <p className="text-muted-foreground mb-6">
+                <h3 className="text-xl font-bold mb-3 font-serif text-elegant-100">{project.title}</h3>
+                <p className="text-elegant-300 mb-6">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tags.map((tag, idx) => (
                     <span 
                       key={idx}
-                      className="inline-flex items-center rounded-full border px-2.5 py-1 text-xs font-medium bg-muted/50 text-muted-foreground border-border"
+                      className="inline-flex items-center rounded-full border border-elegant-700/30 px-2.5 py-1 text-xs font-medium bg-elegant-800/50 text-elegant-200"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
-                <button className="inline-flex items-center text-sm font-medium text-brand-600 hover:text-brand-800 transition-colors group">
+                <button className="inline-flex items-center text-sm font-medium text-rich-300 hover:text-rich-200 transition-colors group">
                   View Case Study 
                   <ArrowUpRight className="ml-1.5 h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </button>
@@ -88,16 +88,16 @@ const ProjectsSection = () => {
           ))}
         </div>
         
-        <div className="mt-16 bg-gradient-to-r from-brand-50 to-tech-50 border border-brand-100/40 rounded-xl p-10 text-center shadow-subtle">
-          <h3 className="text-2xl font-bold mb-4 font-heading">Ready to start your project?</h3>
-          <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
+        <div className="mt-16 border border-elegant-800/30 rounded-md p-10 text-center bg-gradient-to-r from-elegant-900 to-rich-950/90 shadow-elegant">
+          <h3 className="text-2xl font-bold mb-4 font-serif text-elegant-50">Ready to start your project?</h3>
+          <p className="text-elegant-200 max-w-2xl mx-auto mb-8">
             I'm currently available for new projects and would love to discuss how I can help you achieve your technical goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-5 justify-center">
-            <a href="#contact" className="btn-primary px-8 py-3 text-base">
+            <a href="#contact" className="bg-rich-700 hover:bg-rich-800 text-elegant-50 px-8 py-3 text-base rounded-md transition-all">
               Contact Me
             </a>
-            <a href="#services" className="btn-outlined px-8 py-3 text-base">
+            <a href="#services" className="border border-elegant-700 text-elegant-100 bg-elegant-800/30 hover:bg-elegant-800/50 backdrop-blur-sm px-8 py-3 text-base rounded-md transition-all">
               View All Services
             </a>
           </div>

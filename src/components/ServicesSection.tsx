@@ -64,13 +64,13 @@ const serviceCategories = [
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="section-padding bg-gradient-to-b from-background to-muted/10">
+    <section id="services" className="section-padding bg-gradient-to-b from-background to-elegant-50/50">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="section-heading">
             Services
           </div>
-          <h2 className="mb-6 font-heading">Comprehensive IT Solutions</h2>
+          <h2 className="mb-6 font-serif text-elegant-950">Comprehensive IT Solutions</h2>
           <p className="text-lg text-muted-foreground">
             From cloud infrastructure to end-user support, I provide a complete range of IT services
             tailored to meet the unique needs of your business.
@@ -81,20 +81,20 @@ const ServicesSection = () => {
           {serviceCategories.map((category, index) => (
             <div 
               key={index} 
-              className="bg-card border border-border rounded-xl p-6 shadow-subtle card-hover"
+              className="bg-card border border-elegant-100 rounded-md p-6 shadow-elegant card-hover"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="h-14 w-14 rounded-xl bg-brand-50 border border-brand-100 flex items-center justify-center text-brand-600 mb-5">
+              <div className="h-14 w-14 rounded-md bg-elegant-50 border border-elegant-100 flex items-center justify-center text-rich-700 mb-5">
                 <category.icon className="h-7 w-7" />
               </div>
               
-              <h3 className="text-xl font-semibold mb-3 font-heading">{category.title}</h3>
+              <h3 className="text-xl font-semibold mb-3 font-serif text-elegant-950">{category.title}</h3>
               
               <p className="text-muted-foreground mb-5">
                 {category.description}
               </p>
               
-              <div className="space-y-2 mt-5 pt-4 border-t border-border">
+              <div className="space-y-2 mt-5 pt-4 border-t border-elegant-100">
                 {category.services.map((service, idx) => (
                   <div key={idx} className="service-item">
                     <CheckCircle2 className="service-icon" />
@@ -107,12 +107,12 @@ const ServicesSection = () => {
         </div>
         
         <div className="mt-20 text-center">
-          <h3 className="text-2xl font-bold mb-4 font-heading">Need a custom solution?</h3>
+          <h3 className="text-2xl font-bold mb-4 font-serif text-elegant-950">Need a custom solution?</h3>
           <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
             I specialize in tailoring IT solutions to meet your specific business requirements.
             Let's discuss how I can help you achieve your goals.
           </p>
-          <a href="#contact" className="btn-primary px-8 py-3 text-base">
+          <a href="#contact" className="bg-rich-700 hover:bg-rich-800 text-elegant-50 px-8 py-3 text-base inline-block rounded-md transition-all">
             Get in Touch
           </a>
         </div>
