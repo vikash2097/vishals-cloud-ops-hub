@@ -41,10 +41,10 @@ const TestimonialsSection = () => {
     <section id="testimonials" className="section-padding bg-muted/30">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center rounded-full bg-brand-100/60 px-3 py-1 text-sm font-medium text-brand-800 mb-4">
+          <div className="section-heading">
             Testimonials
           </div>
-          <h2 className="mb-6">What Clients Say</h2>
+          <h2 className="mb-6 font-heading">What Clients Say</h2>
           <p className="text-lg text-muted-foreground">
             Don't just take my word for it — here's what clients have to say about working with me.
           </p>
@@ -54,14 +54,15 @@ const TestimonialsSection = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-card border border-border rounded-xl p-6 shadow-sm card-hover"
+              className="bg-card border border-border rounded-xl p-7 shadow-subtle card-hover"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="flex mb-4">
+              <div className="flex mb-5">
                 {renderStars(testimonial.rating)}
               </div>
               
-              <blockquote className="mb-6">
-                <p className="text-lg text-foreground italic">"{testimonial.quote}"</p>
+              <blockquote className="mb-8">
+                <p className="text-lg text-foreground italic leading-relaxed">"{testimonial.quote}"</p>
               </blockquote>
               
               <div className="flex items-center">
@@ -77,16 +78,16 @@ const TestimonialsSection = () => {
           ))}
         </div>
         
-        <div className="mt-16 text-center">
-          <div className="inline-flex items-center justify-center bg-brand-50 text-brand-800 rounded-full px-4 py-1.5 text-sm font-medium border border-brand-100 mb-4">
-            <Star className="h-4 w-4 fill-brand-500 text-brand-500 mr-1" />
+        <div className="mt-20 text-center">
+          <div className="inline-flex items-center justify-center bg-brand-50 text-brand-800 rounded-full px-4 py-2 text-sm font-medium border border-brand-100 mb-5 shadow-subtle">
+            <Star className="h-4 w-4 fill-brand-500 text-brand-500 mr-2" />
             <span>98% Client Satisfaction Rate</span>
           </div>
-          <h3 className="text-2xl font-bold mb-4">Ready to join my list of satisfied clients?</h3>
-          <p className="text-muted-foreground max-w-2xl mx-auto mb-6">
+          <h3 className="text-2xl font-bold mb-4 font-heading">Ready to join my list of satisfied clients?</h3>
+          <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
             Let's discuss how I can help solve your technical challenges and improve your IT infrastructure.
           </p>
-          <a href="#contact" className="btn-primary">
+          <a href="#contact" className="btn-primary px-8 py-3 text-base">
             Start a Conversation
           </a>
         </div>

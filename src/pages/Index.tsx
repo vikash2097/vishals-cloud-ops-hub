@@ -12,7 +12,7 @@ import ScrollToTop from '../components/ScrollToTop';
 
 const Index = () => {
   useEffect(() => {
-    // Smooth scroll functionality for anchor links
+    // Smooth scroll functionality for anchor links with offset for fixed header
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -22,6 +22,7 @@ const Index = () => {
         const targetElement = document.querySelector(href);
         if (!targetElement) return;
         
+        // Offset for fixed header
         window.scrollTo({
           top: targetElement.getBoundingClientRect().top + window.pageYOffset - 80,
           behavior: 'smooth'
@@ -31,6 +32,34 @@ const Index = () => {
 
     // Update document title
     document.title = "Vishal's Cloud Ops - DevOps & Cloud Engineering Services";
+    
+    // Add scroll reveal effect to sections
+    const revealSections = () => {
+      const sections = document.querySelectorAll('section[id]:not(#hero)');
+      
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        
+        if (sectionTop < windowHeight * 0.85) {
+          section.classList.add('animate-fade-up');
+          section.classList.remove('opacity-0');
+        }
+      });
+    };
+    
+    // Initially hide all sections except hero
+    document.querySelectorAll('section[id]:not(#hero)').forEach(section => {
+      section.classList.add('opacity-0');
+    });
+    
+    // Run on page load and scroll
+    revealSections();
+    window.addEventListener('scroll', revealSections);
+    
+    return () => {
+      window.removeEventListener('scroll', revealSections);
+    };
   }, []);
 
   return (

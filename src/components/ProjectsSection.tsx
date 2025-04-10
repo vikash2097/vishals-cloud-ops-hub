@@ -36,13 +36,13 @@ const projects = [
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="section-padding bg-gradient-to-b from-background to-muted/30">
+    <section id="projects" className="section-padding bg-background">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center rounded-full bg-brand-100/60 px-3 py-1 text-sm font-medium text-brand-800 mb-4">
+          <div className="section-heading">
             Featured Projects
           </div>
-          <h2 className="mb-6">Recent Client Success Stories</h2>
+          <h2 className="mb-6 font-heading">Recent Client Success Stories</h2>
           <p className="text-lg text-muted-foreground">
             Check out some of my recent projects and see how I've helped clients solve 
             their technical challenges with tailored solutions.
@@ -53,18 +53,19 @@ const ProjectsSection = () => {
           {projects.map((project, index) => (
             <div 
               key={index} 
-              className="bg-card border border-border rounded-xl overflow-hidden shadow-sm card-hover"
+              className="bg-card border border-border rounded-xl overflow-hidden shadow-card card-hover"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="p-6">
-                <div className="flex justify-between items-start mb-4">
-                  <div className="h-12 w-12 rounded-lg bg-brand-100/60 flex items-center justify-center text-brand-700">
-                    <project.icon className="h-6 w-6" />
+              <div className="p-7">
+                <div className="flex justify-between items-start mb-5">
+                  <div className="h-14 w-14 rounded-xl bg-brand-50 border border-brand-100 flex items-center justify-center text-brand-600">
+                    <project.icon className="h-7 w-7" />
                   </div>
-                  <div className="bg-secondary/10 text-secondary-foreground rounded-full px-3 py-1 text-xs font-medium">
+                  <div className="bg-secondary/10 text-secondary-foreground rounded-full px-3 py-1.5 text-xs font-medium border border-secondary/20">
                     Case Study
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
+                <h3 className="text-xl font-bold mb-3 font-heading">{project.title}</h3>
                 <p className="text-muted-foreground mb-6">
                   {project.description}
                 </p>
@@ -72,30 +73,31 @@ const ProjectsSection = () => {
                   {project.tags.map((tag, idx) => (
                     <span 
                       key={idx}
-                      className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-muted text-muted-foreground border-border"
+                      className="inline-flex items-center rounded-full border px-2.5 py-1 text-xs font-medium bg-muted/50 text-muted-foreground border-border"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
-                <button className="inline-flex items-center text-sm font-medium text-brand-600 hover:text-brand-800 transition-colors">
-                  View Case Study <ArrowUpRight className="ml-1 h-4 w-4" />
+                <button className="inline-flex items-center text-sm font-medium text-brand-600 hover:text-brand-800 transition-colors group">
+                  View Case Study 
+                  <ArrowUpRight className="ml-1.5 h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </button>
               </div>
             </div>
           ))}
         </div>
         
-        <div className="mt-12 bg-gradient-to-r from-brand-50 to-tech-50 border border-brand-100/40 rounded-xl p-8 text-center">
-          <h3 className="text-2xl font-bold mb-4">Ready to start your project?</h3>
-          <p className="text-muted-foreground max-w-2xl mx-auto mb-6">
+        <div className="mt-16 bg-gradient-to-r from-brand-50 to-tech-50 border border-brand-100/40 rounded-xl p-10 text-center shadow-subtle">
+          <h3 className="text-2xl font-bold mb-4 font-heading">Ready to start your project?</h3>
+          <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
             I'm currently available for new projects and would love to discuss how I can help you achieve your technical goals.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#contact" className="btn-primary">
+          <div className="flex flex-col sm:flex-row gap-5 justify-center">
+            <a href="#contact" className="btn-primary px-8 py-3 text-base">
               Contact Me
             </a>
-            <a href="#services" className="btn-outlined">
+            <a href="#services" className="btn-outlined px-8 py-3 text-base">
               View All Services
             </a>
           </div>
