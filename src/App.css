@@ -32,3 +32,8 @@ body {
   white-space: nowrap;
   border-width: 0;
 }
+
+/* Create a standalone colors.css file for better organization */
+:root {
+  /* Our CSS color variables are now defined in index.css */
+}

@@ -28,74 +28,49 @@ export default {
 				serif: ['Playfair Display', 'Georgia', 'serif'],
 			},
 			colors: {
-				border: 'hsl(var(--border))',
-				input: 'hsl(var(--input))',
-				ring: 'hsl(var(--ring))',
-				background: 'hsl(var(--background))',
-				foreground: 'hsl(var(--foreground))',
+				border: 'var(--color-border)',
+				input: 'var(--color-input)',
+				ring: 'var(--color-ring)',
+				background: 'var(--color-background)',
+				foreground: 'var(--color-foreground)',
 				primary: {
-					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					DEFAULT: 'var(--color-primary)',
+					foreground: 'var(--color-primary-foreground)'
 				},
 				secondary: {
-					DEFAULT: 'hsl(var(--secondary))',
-					foreground: 'hsl(var(--secondary-foreground))'
+					DEFAULT: 'var(--color-secondary)',
+					foreground: 'var(--color-secondary-foreground)'
 				},
 				destructive: {
-					DEFAULT: 'hsl(var(--destructive))',
-					foreground: 'hsl(var(--destructive-foreground))'
+					DEFAULT: 'var(--color-destructive)',
+					foreground: 'var(--color-destructive-foreground)'
 				},
 				muted: {
-					DEFAULT: 'hsl(var(--muted))',
-					foreground: 'hsl(var(--muted-foreground))'
+					DEFAULT: 'var(--color-muted)',
+					foreground: 'var(--color-muted-foreground)'
 				},
 				accent: {
-					DEFAULT: 'hsl(var(--accent))',
-					foreground: 'hsl(var(--accent-foreground))'
+					DEFAULT: 'var(--color-accent)',
+					foreground: 'var(--color-accent-foreground)'
 				},
 				popover: {
-					DEFAULT: 'hsl(var(--popover))',
-					foreground: 'hsl(var(--popover-foreground))'
+					DEFAULT: 'var(--color-popover)',
+					foreground: 'var(--color-popover-foreground)'
 				},
 				card: {
-					DEFAULT: 'hsl(var(--card))',
-					foreground: 'hsl(var(--card-foreground))'
+					DEFAULT: 'var(--color-card)',
+					foreground: 'var(--color-card-foreground)'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
+				white: 'var(--color-white)',
+				black: 'var(--color-black)',
+				warm: {
+					DEFAULT: 'var(--color-warm)',
+					light: 'var(--color-warm-light)',
+					dark: 'var(--color-warm-dark)',
 				},
-				elegant: {
-					50: '#f8f7f4',
-					100: '#f1efe9',
-					200: '#e2ded3',
-					300: '#d5cfc0',
-					400: '#c7bead',
-					500: '#b8ad9b',
-					600: '#a99a8b',
-					700: '#8e7f71',
-					800: '#73675c',
-					900: '#3d3630',
-					950: '#211c18',
-				},
-				rich: {
-					50: '#f7f4f2',
-					100: '#efe6e0',
-					200: '#e0cec2',
-					300: '#d0b5a3',
-					400: '#c09c84',
-					500: '#b0846c',
-					600: '#a0765f',
-					700: '#8c664f',
-					800: '#735344',
-					900: '#5f4539',
-					950: '#32211a',
+				light: {
+					DEFAULT: 'var(--color-light)',
+					darker: 'var(--color-light-darker)',
 				},
 			},
 			borderRadius: {
